@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_column">
+    <sp_column action="INSERT_OR_UPDATE">
+        <class_name/>
+        <order>1</order>
+        <size>9</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">2956fa2447702200c380b6a0ec9a71e0</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-07-20 19:12:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a956fe2447702200c380b6a0ec9a712e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
+        <sys_update_name>sp_column_a956fe2447702200c380b6a0ec9a712e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-07-20 19:12:14</sys_updated_on>
+    </sp_column>
+</record_update>

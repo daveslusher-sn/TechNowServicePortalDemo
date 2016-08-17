@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="m2m_sp_widget_dependency">
+    <m2m_sp_widget_dependency action="INSERT_OR_UPDATE">
+        <sp_dependency display_value="fullcalendar">644cfb85df121200ba13a4836bf2633d</sp_dependency>
+        <sp_widget display_value="simpledemo">8ecfd6a047702200c380b6a0ec9a71ab</sp_widget>
+        <sys_class_name>m2m_sp_widget_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-07-28 00:53:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7d77040b47702200c380b6a0ec9a7160</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>fullcalendar.simpledemo</sys_name>
+        <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
+        <sys_update_name>m2m_sp_widget_dependency_7d77040b47702200c380b6a0ec9a7160</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-07-28 00:53:01</sys_updated_on>
+    </m2m_sp_widget_dependency>
+</record_update>

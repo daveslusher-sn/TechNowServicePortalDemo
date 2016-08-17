@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_scope_table_access">
+    <sys_scope_table_access action="INSERT_OR_UPDATE">
+        <create_access>false</create_access>
+        <delete_access>false</delete_access>
+        <example_stack_trace>Default-thread-8
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.getCurrentStackTrace(ScopeAccessProvider.java:234)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.record(ScopeAccessProvider.java:202)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider$ScopeAccessCache.access$100(ScopeAccessProvider.java:81)
+	com.glide.sys.fencing.dependency.ScopeAccessProvider.recordAccess(ScopeAccessProvider.java:64)
+	com.glide.sys.fencing.dependency.ScopeAccessRecorder.record(ScopeAccessRecorder.java:13)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsTo(ScopedTableAccess.java:93)
+	com.glide.script.fencing.access.ScopedTableAccess.hasRightsToTable(ScopedTableAccess.java:40)
+	com.glide.script.fencing.ScopedGlideRecord.getScopeAccessStatusForTable(ScopedGlideRecord.java:229)
+	com.glide.script.fencing.ScopedGlideRecord.checkOperationPermitted(ScopedGlideRecord.java:211)
+	com.glide.script.fencing.ScopedGlideRecord.jsFunction_query(ScopedGlideRecord.java:170)
+	sun.reflect.GeneratedMethodAccessor379.invoke(Unknown Source)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:497)
+	org.mozilla.javascript.MemberBox.invoke(MemberBox.java:138)
+	org.mozilla.javascript.FunctionObject.doInvoke(FunctionObject.java:637)
+	org.mozilla.javascript.FunctionObject.call(FunctionObject.java:581)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2574)
+	org.mozilla.javascript.optimizer.OptRuntime.callProp0(OptRuntime.java:85)
+	org.mozilla.javascript.gen._refname__1921._c_anonymous_2(&lt;refname&gt;:11)
+	org.mozilla.javascript.gen._refname__1921.call(&lt;refname&gt;)
+	org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2645)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2582)
+	org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:23)
+	org.mozilla.javascript.gen._refname__1921._c_anonymous_1(&lt;refname&gt;:1)
+	org.mozilla.javascript.gen._refname__1921.call(&lt;refname&gt;)
+	org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2645)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2582)
+	org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:23)
+	org.mozilla.javascript.gen._refname__1921._c_script_0(&lt;refname&gt;:1)
+	org.mozilla.javascript.gen._refname__1921.call(&lt;refname&gt;)
+	org.mozilla.javascript.gen._refname__1921.exec(&lt;refname&gt;)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:236)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:107)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:73)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:64)
+	com.glide.service_portal.SPScriptEvaluator.eval(SPScriptEvaluator.java:36)
+	com.glide.service_portal.widget.SPScriptRunner.eval(SPScriptRunner.java:185)
+	com.glide.service_portal.widget.SPScriptRunner.runScript(SPScriptRunner.java:64)
+	com.glide.service_portal.widget.SPWidget.get(SPWidget.java:117)
+	com.glide.service_portal.widget.SPScriptable.getWidget(SPScriptable.java:364)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:497)
+	org.mozilla.javascript.MemberBox.invoke(MemberBox.java:138)
+	org.mozilla.javascript.NativeJavaMethod.call(NativeJavaMethod.java:292)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2577)
+	org.mozilla.javascript.optimizer.OptRuntime.call2(OptRuntime.java:42)
+	org.mozilla.javascript.gen._refname__1734._c_setPreview_3(&lt;refname&gt;:17)
+	org.mozilla.javascript.gen._refname__1734.call(&lt;refname&gt;)
+	org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2645)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2582)
+	org.mozilla.javascript.optimizer.OptRuntime.callName(OptRuntime.java:63)
+	org.mozilla.javascript.gen._refname__1734._c_anonymous_2(&lt;refname&gt;:117)
+	org.mozilla.javascript.gen._refname__1734.call(&lt;refname&gt;)
+	org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2645)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2582)
+	org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:23)
+	org.mozilla.javascript.gen._refname__1734._c_anonymous_1(&lt;refname&gt;:1)
+	org.mozilla.javascript.gen._refname__1734.call(&lt;refname&gt;)
+	org.mozilla.javascript.ScriptRuntime.doCall2(ScriptRuntime.java:2645)
+	org.mozilla.javascript.ScriptRuntime.doCall(ScriptRuntime.java:2582)
+	org.mozilla.javascript.optimizer.OptRuntime.call0(OptRuntime.java:23)
+	org.mozilla.javascript.gen._refname__1734._c_script_0(&lt;refname&gt;:1)
+	org.mozilla.javascript.gen._refname__1734.call(&lt;refname&gt;)
+	org.mozilla.javascript.ContextFactory.doTopCall(ContextFactory.java:560)
+	org.mozilla.javascript.ScriptRuntime.doTopCall(ScriptRuntime.java:3439)
+	org.mozilla.javascript.gen._refname__1734.call(&lt;refname&gt;)
+	org.mozilla.javascript.gen._refname__1734.exec(&lt;refname&gt;)
+	com.glide.script.ScriptEvaluator.execute(ScriptEvaluator.java:236)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:107)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:73)
+	com.glide.script.ScriptEvaluator.evaluateString(ScriptEvaluator.java:64)
+	com.glide.service_portal.SPScriptEvaluator.eval(SPScriptEvaluator.java:36)
+	com.glide.service_portal.widget.SPScriptRunner.eval(SPScriptRunner.java:185)
+	com.glide.service_portal.widget.SPScriptRunner.runScript(SPScriptRunner.java:82)
+	com.glide.service_portal.widget.SPWidget.get(SPWidget.java:109)
+	com.glide.service_portal.widget.SPWidget.get(SPWidget.java:92)
+	com.glide.service_portal.SPPage.getColumnRectangles(SPPage.java:268)
+	com.glide.service_portal.SPPage.getRowColumns(SPPage.java:213)
+	com.glide.service_portal.SPPage.getContainerRows(SPPage.java:193)
+	com.glide.service_portal.SPPage.getContainers(SPPage.java:180)
+	com.glide.service_portal.SPPage.getPage(SPPage.java:99)
+	com.glide.service_portal.SPPage.get(SPPage.java:54)
+	com.glide.service_portal.SPRestService.page(SPRestService.java:43)
+	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	java.lang.reflect.Method.invoke(Method.java:497)
+	com.glide.rest.handler.impl.ServiceHandlerImpl.invokeService(ServiceHandlerImpl.java:41)
+	com.glide.rest.processors.RESTAPIProcessor.process(RESTAPIProcessor.java:228)
+	com.glide.processors.AProcessor.runProcessor(AProcessor.java:412)
+	com.glide.processors.AProcessor.processTransaction(AProcessor.java:187)
+	com.glide.processors.ProcessorRegistry.process(ProcessorRegistry.java:165)
+	com.glide.ui.GlideServletTransaction.process(GlideServletTransaction.java:49)
+	com.glide.sys.ServletTransaction.run(ServletTransaction.java:34)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	java.lang.Thread.run(Thread.java:745)
+</example_stack_trace>
+        <read_access>true</read_access>
+        <source_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</source_scope>
+        <sys_class_name>sys_scope_table_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-07-20 17:40:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>716122e047702200c380b6a0ec9a7112</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>incident</sys_name>
+        <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
+        <sys_update_name>sys_scope_table_access_716122e047702200c380b6a0ec9a7112</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-07-20 17:40:47</sys_updated_on>
+        <table_name>incident</table_name>
+        <target_scope display_value="Global">global</target_scope>
+        <write_access>false</write_access>
+    </sys_scope_table_access>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope, spUtil) {
+  /* widget controller */
+  var c = this;
+	$scope.orderField = "number";
+
+	// this makes the UI watch the data tables and update on changes
+  spUtil.recordWatch($scope, "incident", "", function(name, data) {
+        spUtil.update($scope);
+    });
+	
+	$scope.changeSort = function(field) {
+		$scope.orderField = field;
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>simpledemo</id>
+        <internal>false</internal>
+        <link/>
+        <name>simpledemo</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	data.incidents = [];
+	
+	var gr = new GlideRecord('incident');
+	gr.addActiveQuery();
+	gr.setLimit(10);
+	gr.orderByDesc('sys_updated_on');
+	gr.query();	
+	
+	while(gr.next()) {
+		var incident = {};
+		incident.number = gr.getDisplayValue('number');			
+		incident.short_description = gr.getDisplayValue('short_description');
+		incident.sys_id = gr.getUniqueValue();
+		incident.sys_updated_on = gr.getValue('sys_updated_on');
+		data.incidents.push(incident);
+	}
+		
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2016-07-20 17:33:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8ecfd6a047702200c380b6a0ec9a71ab</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>simpledemo</sys_name>
+        <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
+        <sys_update_name>sp_widget_8ecfd6a047702200c380b6a0ec9a71ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2016-07-20 18:11:53</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+     <pre>Sort by = {{orderField}}</pre>
+
+    <table>
+      <th><button ng-if="orderField != 'number'" ng-click="changeSort('number')">Number</button></th>
+      <th><button ng-if="orderField != 'short_description'" ng-click="changeSort('short_description')">Short Description</button></th>
+      <th><button ng-if="orderField != 'sys_updated_on'" ng-click="changeSort('sys_updated_on')">Update</button></th>
+    <tr ng-repeat="incident in data.incidents | orderBy:orderField">
+      <td>{{incident.number}}</td>
+      <td>{{incident.short_description}}</td>
+      <td>{{incident.sys_updated_on}}</td>
+    </tr>
+  </table>
+  
+</div>]]></template>
+    </sp_widget>
+</record_update>
