@@ -87,10 +87,10 @@ button {
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>technow28widget</id>
+        <id>technow29widget</id>
         <internal>false</internal>
         <link/>
-        <name>TechNow28Widget</name>
+        <name>TechNow29Widget</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -99,7 +99,7 @@ button {
   /* e.g., data.table = $sp.getValue('table'); */
 	data.incidents = [];
 	
-	var gr = new GlideRecord('incident');
+	var gr = new GlideRecord('problem');
     gr.addActiveQuery();
     gr.setLimit(10);
     gr.orderByDesc('sys_updated_on');
@@ -120,18 +120,18 @@ button {
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2016-07-20 19:19:58</sys_created_on>
+        <sys_created_on>2016-08-17 19:54:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>9fe7726447702200c380b6a0ec9a717b</sys_id>
-        <sys_mod_count>40</sys_mod_count>
-        <sys_name>TechNow28Widget</sys_name>
+        <sys_id>789ccb2d47116200c380b6a0ec9a7157</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>TechNow29Widget</sys_name>
         <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
-        <sys_update_name>sp_widget_9fe7726447702200c380b6a0ec9a717b</sys_update_name>
+        <sys_update_name>sp_widget_789ccb2d47116200c380b6a0ec9a7157</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-08-17 19:53:28</sys_updated_on>
+        <sys_updated_on>2016-08-17 20:12:42</sys_updated_on>
         <template><![CDATA[<div>
 <!-- your widget template -->
   <pre>Editing = {{editingRecord.sys_id}}</pre>
