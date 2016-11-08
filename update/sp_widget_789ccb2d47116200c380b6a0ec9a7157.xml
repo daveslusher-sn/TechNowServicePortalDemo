@@ -6,7 +6,7 @@
   var c = this;
 	$scope.orderField = "number";
 	
-	// this makes the UI watch the data tables and update on changes
+	// this makes the UI wadtch the data tables and update on changes
   spUtil.recordWatch($scope, "incident", "", function(name, data) {
        spUtil.update($scope);
   });
@@ -87,10 +87,10 @@ button {
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>technow29widget</id>
+        <id/>
         <internal>false</internal>
         <link/>
-        <name>TechNow29Widget</name>
+        <name>Copy of TechNow28Widget</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -123,15 +123,15 @@ button {
         <sys_created_on>2016-08-17 19:54:43</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>789ccb2d47116200c380b6a0ec9a7157</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>TechNow29Widget</sys_name>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Copy of TechNow28Widget</sys_name>
         <sys_package display_value="TechNow 28" source="sn_technow_28">98ae92a047702200c380b6a0ec9a7167</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="TechNow 28">98ae92a047702200c380b6a0ec9a7167</sys_scope>
         <sys_update_name>sp_widget_789ccb2d47116200c380b6a0ec9a7157</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2016-08-17 20:12:42</sys_updated_on>
+        <sys_updated_on>2016-08-17 20:37:58</sys_updated_on>
         <template><![CDATA[<div>
 <!-- your widget template -->
   <pre>Editing = {{editingRecord.sys_id}}</pre>
@@ -143,7 +143,7 @@ button {
   	<th><button ng-click="changeSort('short_description')" >Short Description</button></th>
   <th><button ng-click="changeSort('sys_updated_on')" >Updated</button></th>
       </tr>
-    <tr ng-repeat="incident in data.incidents | orderBy:orderField:orderReverse | filter:searchText ">      
+    <tr ng-repeat="incident in data.incidents | orderBy:orderField:orderReverse | filter:incident.short_description.indexOf(searchText)">      
       <td ng-class="getPriorityClass(incident)">{{incident.number}}
       </td>
       <td ng-if="incident.sys_id == editingRecord.sys_id" ><input type="text" ng-model="editingRecord.short_description" />
